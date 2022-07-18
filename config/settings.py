@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     #apps
     'blog',
     'contact',
+    'gallery',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
+
+
+INTERNAL_IPS = '127.0.0.1'
+
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.path.join(BASE_DIR, 'cache'),
+    }
+}

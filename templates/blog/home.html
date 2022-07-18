@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
+{% load gallery_tags %}
 
 {% block content %}
-    <!-- Hero Section Begin -->
+  <!-- Hero Section Begin -->
+  {% get_gallery %}
+
     <section class="hero">
         <div class="hero__slider owl-carousel">
             <div class="hero__item">
